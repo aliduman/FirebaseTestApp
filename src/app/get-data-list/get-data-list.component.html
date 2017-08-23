@@ -1,5 +1,43 @@
-<ul>
-  <li class="text" *ngFor="let item of items | async">
-    {{item.$value}}
-  </li>
-</ul>
+<pre>{{name}} {{surname}}</pre>
+<div class="angular-form">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="form-group">
+        <label for="name">Adınız:</label>
+        <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Adınız:"/>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="form-group">
+        <label for="surname">Soyadınız:</label>
+        <input type="text" class="form-control" id="surname" placeholder="Soyadınız:" />
+      </div>
+    </div>
+    <div class="col-lg-12">
+      <button type="button" class="btn btn-primary" (click)="addData()">Listeye Ekle</button>
+    </div>
+  </div>
+</div>
+
+<br>
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Adınız</th>
+          <th>Soyadınız</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let d of userData">
+          <th scope="row">{{d.index}}</th>
+          <td>{{d.name}}</td>
+          <td>{{d.surname}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
