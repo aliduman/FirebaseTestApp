@@ -1,4 +1,4 @@
-# FirebaseTestApp
+# Angular Firebase App Example
 
 This project is done as an example of data withdrawal using Firebase API.
 
